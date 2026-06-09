@@ -13,10 +13,50 @@
     </header>
 
     <main>
+      <section id="auth-container">
+        <h3>Account</h3>
+        <div id="auth-status" class="hidden"></div>
+
+        <div id="login-panel">
+          <h4>Login</h4>
+          <form id="login-form">
+            <div class="form-group">
+              <label for="login-email">Email:</label>
+              <input type="email" id="login-email" required placeholder="student@mergington.edu" />
+            </div>
+            <div class="form-group">
+              <label for="login-password">Password:</label>
+              <input type="password" id="login-password" required placeholder="password" />
+            </div>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+
+        <div id="register-panel">
+          <h4>Register</h4>
+          <form id="register-form">
+            <div class="form-group">
+              <label for="register-email">Email:</label>
+              <input type="email" id="register-email" required placeholder="newstudent@mergington.edu" />
+            </div>
+            <div class="form-group">
+              <label for="register-password">Password:</label>
+              <input type="password" id="register-password" required placeholder="password" />
+            </div>
+            <div class="form-group">
+              <label for="register-name">Full Name:</label>
+              <input type="text" id="register-name" placeholder="Student Name" />
+            </div>
+            <button type="submit">Register</button>
+          </form>
+        </div>
+
+        <button id="logout-button" class="hidden">Logout</button>
+      </section>
+
       <section id="activities-container">
         <h3>Available Activities</h3>
         <div id="activities-list">
-          <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
         </div>
       </section>
@@ -32,7 +72,6 @@
             <label for="activity">Select Activity:</label>
             <select id="activity" required>
               <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
             </select>
           </div>
           <button type="submit">Sign Up</button>
